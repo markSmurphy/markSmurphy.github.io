@@ -37,62 +37,42 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
-            </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
-            </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
-            </a>
+            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
           </div>
           <div>
-            <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
+            <h5>NPM Packages</h5>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
+              href="https://www.npmjs.com/package/akamai-staging"
               target="_blank"
               rel="noreferrer noopener">
-              Stack Overflow
+              akamai-staging
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            <h6><code>A command line utility to locate an Akamai Staging network IP address for one or more domains</code></h6>
             <a
-              href="https://twitter.com/"
+              href="https://www.npmjs.com/package/akamai-error-lookup"
               target="_blank"
               rel="noreferrer noopener">
-              Twitter
+              akamai-error-lookup
             </a>
+            <h6><code>Retrieves diagnostic details of Akamai error reference numbers via Akamai's API</code></h6>
           </div>
           <div>
             <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count="true"
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
-            </a>
+            <a href="https://github.com/markSmurphy">GitHub</a>
+            <a href="https://www.linkedin.com/in/markmurphy3/">LinkedIn</a>
           </div>
         </section>
 
         <a
-          href="https://opensource.facebook.com/"
+          href="https://github.com/markSmurphy"
           target="_blank"
           rel="noreferrer noopener"
           className="fbOpenSource">
           <img
-            src={`${this.props.config.baseUrl}img/oss_logo.png`}
-            alt="Facebook Open Source"
-            width="170"
-            height="45"
+            src={`${this.props.config.baseUrl}img/transparent-inverted-white-logo.png`}
+            alt="Github Profile"
+            //width="327"
+            //height="147"
           />
         </a>
         <section className="copyright">{this.props.config.copyright}</section>
