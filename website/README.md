@@ -15,6 +15,7 @@ This website was created with [Docusaurus](https://docusaurus.io/).
 ```sh
 # Install dependencies
 $ yarn
+
 ```
 2. Run your dev server:
 
@@ -121,7 +122,9 @@ For more information about adding new docs, click [here](https://docusaurus.io/d
 1. Make sure there is a header link to your blog in `website/siteConfig.js`:
 
 `website/siteConfig.js`
+
 ```javascript
+
 headerLinks: [
     ...
     { blog: true, label: 'Blog' },
@@ -151,6 +154,7 @@ For more information about blog posts, click [here](https://docusaurus.io/docs/e
 1. Add links to docs, custom pages or external links by editing the headerLinks field of `website/siteConfig.js`:
 
 `website/siteConfig.js`
+
 ```javascript
 {
   headerLinks: [
@@ -175,6 +179,7 @@ For more information about the navigation bar, click [here](https://docusaurus.i
 1. If you want your page to show up in your navigation header, you will need to update `website/siteConfig.js` to add to the `headerLinks` element:
 
 `website/siteConfig.js`
+
 ```javascript
 {
   headerLinks: [
