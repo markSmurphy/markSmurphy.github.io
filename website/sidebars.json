@@ -1,8 +1,7 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Designing for Availability": ["designing-for-availability.md"],
+    "Hosting Web Assets": ["hosting-assets.md"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
