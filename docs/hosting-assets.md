@@ -1,43 +1,50 @@
 ---
 id: hosting-assets.md
-title: Hosting Web Assets
-sidebar_label: Hosting Assets
+title: Hosting Web Assets in a Multi Region Cloud Topology
+sidebar_label: Hosting Web Assets
 ---
 
-## Overview
-
-### Example System Topology
-
----
-
-## Bundling & Minification
+## Abstract
 
 ---
 
-## HTTP/2
+## Introduction
+
+* Site Speed (serving from a cache is faster)
+* Minimise or eliminate stale content
 
 ---
 
-## Inline core `.js` & `.css`
+## Problem
+
+### Example System Topology (Single Region)
+
+### Example System Topology (Multi Region)
+
+### Global Rollout/Rollback Cache Poisoning example
 
 ---
 
-## Hosting assets separately from server-side code
+## Solution
+
+### Caching
+
+#### Cache Directives
+
+### CDN
+
+### Bundling & Minification
+
+### HTTP/2
+
+### Inline core `.js` & `.css`
+
+### Hosting assets separately from server-side code
 
 ---
 
-## Global Rollout/Rollback
-
-### Cache Poisoning example
-
-#### Solution
+## Conclusion
 
 ---
 
-## Caching
-
-### Cache Directives
-
----
-
-## CDN
+## References

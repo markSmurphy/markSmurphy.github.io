@@ -4,7 +4,13 @@ title: Designing for Availability
 sidebar_label: Designing for Availability
 ---
 
-## Overview
+## Abstract
+
+---
+
+## Introduction
+
+---
 
 ### Terminology
 
@@ -12,11 +18,11 @@ sidebar_label: Designing for Availability
 * Availability
 * Et al
 
-### Uptime/Availability Percentages Explained
+## Problem
 
 ---
 
-## Calculating a System's Availability
+### Uptime/Availability Percentages Explained
 
 ### ~~Tiers Within a System~~
 
@@ -26,9 +32,11 @@ sidebar_label: Designing for Availability
 
 ### Real World Example
 
+## Solution
+
 ---
 
-## Solutions
+### Calculating a System's Availability
 
 ### Scale Out
 
@@ -42,10 +50,12 @@ sidebar_label: Designing for Availability
 
 ##### Impact on Availability
 
----
-
-## Conclusions
+## Conclusion
 
 ---
 
 ## Implications for Designing for the Cloud
+
+---
+
+## References
