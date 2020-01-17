@@ -2,21 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://marksmurphy.github.io//blog</id>
     <title>Tech Blog Blog</title>
-    <updated>2019-06-11T06:00:00Z</updated>
-    <generator>Feed for Node.js</generator>
+    <updated>2019-06-11T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://marksmurphy.github.io//blog"/>
     <subtitle>The best place to stay up-to-date with the latest Tech Blog news and events.</subtitle>
     <logo>https://marksmurphy.github.io//img/transparent-inverted-white-plain.png</logo>
-    <rights>Copyright © 2019 Mark Murphy</rights>
+    <rights>Copyright © 2020 Mark Murphy</rights>
     <entry>
         <title type="html"><![CDATA[Tech Blog Coming Soon]]></title>
         <id>https://marksmurphy.github.io//blog/2019/06/11/Coming-soon.html</id>
-        <link href="https://marksmurphy.github.io//blog/2019/06/11/Coming-soon.html">
-        </link>
-        <updated>2019-06-11T06:00:00Z</updated>
+        <link href="https://marksmurphy.github.io//blog/2019/06/11/Coming-soon.html"/>
+        <updated>2019-06-11T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>Tech Blogs Articles will appear here.</p> ]]></summary>
         <author>
             <name>Mark Murphy</name>
+            <email/>
             <uri>https://github.com/markSmurphy</uri>
         </author>
     </entry>
