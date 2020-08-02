@@ -10,6 +10,6 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "docusaurus": "^1.14.4"
+    "docusaurus": "^1.14.5"
   }
 }
