@@ -20,7 +20,7 @@ authorURL: https://github.com/markSmurphy
 ![downloads per month](https://img.shields.io/npm/dm/distributed-dig?style=flat-square)
 ![downloads per year](https://img.shields.io/npm/dy/distributed-dig?style=flat-square)
 ![downloads total](https://img.shields.io/npm/dt/distributed-dig?style=flat-square)
-[distributed-dig on npmjs.com](https://www.npmjs.com/package/codename-generator)
+[distributed-dig on npmjs.com](https://www.npmjs.com/package/distributed-dig)
 
 ### Codename Generator
 
