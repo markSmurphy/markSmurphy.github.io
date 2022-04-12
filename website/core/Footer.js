@@ -36,10 +36,10 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
+            <h5>Articles</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
           </div>
-          <div>
+{/*           <div>
             <h5>NPM Packages</h5>
             <a
               href="https://www.npmjs.com/package/akamai-staging"
@@ -55,11 +55,12 @@ class Footer extends React.Component {
               akamai-error-lookup
             </a>
             <h6><code>Retrieves diagnostic details of Akamai error reference numbers via Akamai's API</code></h6>
-          </div>
+          </div> */}
           <div>
-            <h5>More</h5>
-            <a href="https://github.com/markSmurphy">GitHub</a>
+            <h5>Links</h5>
             <a href="https://www.linkedin.com/in/markmurphy3/">LinkedIn</a>
+            <a href="https://www.npmjs.com/~mark.murphy">npmjs</a>
+            <a href="https://github.com/markSmurphy">GitHub</a>
           </div>
         </section>
 
