@@ -1,0 +1,26 @@
+{
+  "permalink": "/blog/2022/04/11/npm-packages",
+  "source": "@site/blog/2022-04-11-npm-packages.md",
+  "title": "NPM Packages",
+  "description": "NPM Packages",
+  "date": "2022-04-11T00:00:00.000Z",
+  "formattedDate": "April 11, 2022",
+  "tags": [],
+  "readingTime": 0.815,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Mark Murphy",
+      "url": "https://github.com/markSmurphy"
+    }
+  ],
+  "frontMatter": {
+    "title": "NPM Packages",
+    "author": "Mark Murphy",
+    "authorURL": "https://github.com/markSmurphy"
+  },
+  "prevItem": {
+    "title": "Understanding High Availability in Complex Systems",
+    "permalink": "/blog/2022/04/12/High-Availability"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "art",
+  "id": "art",
+  "title": "Sketches",
+  "description": "Upload artwork here.",
+  "source": "@site/../docs/art.md",
+  "sourceDirName": ".",
+  "slug": "/art",
+  "permalink": "/docs/art",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "art",
+    "title": "Sketches",
+    "sidebar_label": "Sketches"
+  }
+}

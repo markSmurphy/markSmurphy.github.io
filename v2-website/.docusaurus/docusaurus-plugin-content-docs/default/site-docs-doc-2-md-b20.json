@@ -1,0 +1,20 @@
+{
+  "unversionedId": "doc2",
+  "id": "doc2",
+  "title": "document number 2",
+  "description": "This is a link to another document.",
+  "source": "@site/../docs/doc2.md",
+  "sourceDirName": ".",
+  "slug": "/doc2",
+  "permalink": "/docs/doc2",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "doc2",
+    "title": "document number 2"
+  }
+}

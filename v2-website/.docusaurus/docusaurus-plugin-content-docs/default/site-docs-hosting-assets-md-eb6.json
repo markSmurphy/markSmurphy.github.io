@@ -1,0 +1,26 @@
+{
+  "unversionedId": "hosting-assets.md",
+  "id": "hosting-assets.md",
+  "title": "Hosting Web Assets in a Multi Region Cloud Topology",
+  "description": "Abstract",
+  "source": "@site/../docs/hosting-assets.md",
+  "sourceDirName": ".",
+  "slug": "/hosting-assets.md",
+  "permalink": "/docs/hosting-assets.md",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "hosting-assets.md",
+    "title": "Hosting Web Assets in a Multi Region Cloud Topology",
+    "sidebar_label": "Hosting Web Assets"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Designing for Availability",
+    "permalink": "/docs/designing-for-availability.md"
+  }
+}

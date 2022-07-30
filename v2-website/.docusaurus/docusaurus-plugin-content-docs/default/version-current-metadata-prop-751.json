@@ -1,0 +1,134 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "docs": [
+      {
+        "type": "category",
+        "label": "Designing for Availability",
+        "items": [
+          {
+            "type": "link",
+            "label": "Designing for Availability",
+            "href": "/docs/designing-for-availability.md",
+            "docId": "designing-for-availability.md"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Hosting Web Assets",
+        "items": [
+          {
+            "type": "link",
+            "label": "Hosting Web Assets",
+            "href": "/docs/hosting-assets.md",
+            "docId": "hosting-assets.md"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      }
+    ],
+    "docs-other": [
+      {
+        "type": "category",
+        "label": "First Category",
+        "items": [
+          {
+            "type": "link",
+            "label": "Other Document",
+            "href": "/docs/doc4",
+            "docId": "doc4"
+          },
+          {
+            "type": "link",
+            "label": "Fifth Document",
+            "href": "/docs/doc5",
+            "docId": "doc5"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      }
+    ]
+  },
+  "docs": {
+    "akamai-error-lookup.README": {
+      "id": "akamai-error-lookup.README",
+      "title": "akamai-error-lookup",
+      "description": "npm"
+    },
+    "akamai-staging.README": {
+      "id": "akamai-staging.README",
+      "title": "akamai-staging",
+      "description": "npm"
+    },
+    "art": {
+      "id": "art",
+      "title": "Sketches",
+      "description": "Upload artwork here."
+    },
+    "cv": {
+      "id": "cv",
+      "title": "Curriculum Vitae",
+      "description": "Upload CV here."
+    },
+    "designing-for-availability.md": {
+      "id": "designing-for-availability.md",
+      "title": "Designing for Availability",
+      "description": "Abstract",
+      "sidebar": "docs"
+    },
+    "doc1": {
+      "id": "doc1",
+      "title": "Latin-ish",
+      "description": "Check the documentation for how to use Docusaurus."
+    },
+    "doc2": {
+      "id": "doc2",
+      "title": "document number 2",
+      "description": "This is a link to another document."
+    },
+    "doc3": {
+      "id": "doc3",
+      "title": "This is document number 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "doc4": {
+      "id": "doc4",
+      "title": "Other Document",
+      "description": "this is another document",
+      "sidebar": "docs-other"
+    },
+    "doc5": {
+      "id": "doc5",
+      "title": "Fifth Document",
+      "description": "Another one",
+      "sidebar": "docs-other"
+    },
+    "filename-here.md": {
+      "id": "filename-here.md",
+      "title": "Full Title Here",
+      "description": "Framework"
+    },
+    "hosting-assets.md": {
+      "id": "hosting-assets.md",
+      "title": "Hosting Web Assets in a Multi Region Cloud Topology",
+      "description": "Abstract",
+      "sidebar": "docs"
+    },
+    "packages": {
+      "id": "packages",
+      "title": "Packages",
+      "description": "Packages"
+    }
+  }
+}

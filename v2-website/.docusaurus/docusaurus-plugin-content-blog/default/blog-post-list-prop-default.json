@@ -1,0 +1,13 @@
+{
+  "title": "Recent posts",
+  "items": [
+    {
+      "title": "Understanding High Availability in Complex Systems",
+      "permalink": "/blog/2022/04/12/High-Availability"
+    },
+    {
+      "title": "NPM Packages",
+      "permalink": "/blog/2022/04/11/npm-packages"
+    }
+  ]
+}

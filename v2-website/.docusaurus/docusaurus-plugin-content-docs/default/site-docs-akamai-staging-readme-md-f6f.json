@@ -1,0 +1,17 @@
+{
+  "unversionedId": "akamai-staging.README",
+  "id": "akamai-staging.README",
+  "title": "akamai-staging",
+  "description": "npm",
+  "source": "@site/../docs/akamai-staging.README.md",
+  "sourceDirName": ".",
+  "slug": "/akamai-staging.README",
+  "permalink": "/docs/akamai-staging.README",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {}
+}

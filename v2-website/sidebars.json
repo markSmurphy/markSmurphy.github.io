@@ -1,0 +1,9 @@
+{
+  "docs": {
+    "Designing for Availability": ["designing-for-availability.md"],
+    "Hosting Web Assets": ["hosting-assets.md"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}
