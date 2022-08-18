@@ -29,13 +29,13 @@ module.exports={
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
           "path": "../docs",
-          "sidebarPath": "./sidebars.json"
+          "sidebarPath": "../website/sidebars.json"
         },
         "blog": {
           "path": "blog"
         },
         "theme": {
-          "customCss": "./src/css/customTheme.css"
+          "customCss": "../src/css/customTheme.css"
         }
       }
     ]

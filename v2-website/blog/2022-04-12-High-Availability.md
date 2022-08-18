@@ -3,7 +3,6 @@ title: Understanding High Availability in Complex Systems
 author: Mark Murphy
 authorURL: "https://github.com/markSmurphy"
 ---
-
 ## Understanding high availability in complex systems, and how to calculate them
 
 When working on complex, distributed, multi-tiered systems there are always certain non-functional requirements that the solution should achieve.
@@ -11,16 +10,16 @@ Performance and resilience can be a focus of a given sprint team at a component 
 
 In this article we scrutinise real-world deployments to understand:
 
-* The relationship between complexity and availability.
-* How to work out the theoretical availability of a system.
-* How to monitor the actual availability.
-* How to achieve 99.99% availability.
+-   The relationship between complexity and availability.
+-   How to work out the theoretical availability of a system.
+-   How to monitor the actual availability.
+-   How to achieve 99.99% availability.
 
----
+* * *
 
 ### The relationship between complexity and availability
 
-The complexity we're referring to here is *not* complexity of the code nor the complexity of the functional solution.
+The complexity we're referring to here is _not_ complexity of the code nor the complexity of the functional solution.
 By `complexity` we mean the non-functional complexity that come hand-in-hand with multi-tiered micro-service solutions.
 
 As an end-to-end system becomes more complex, it also becomes, probabilistically, less available.
@@ -35,7 +34,6 @@ Or, to put it another way, it could be unavailable for 1% of the time; which equ
 
 If this database is unavailable then our whole system is down. So our system also has an availability of 99%
 
-> An SLA of 99% is awfully low, but we're keeping this example simple and rounding up to whole numbers.
+&gt; An SLA of 99% is awfully low, but we're keeping this example simple and rounding up to whole numbers.
 
 There are very good reasons why don't design [thick-client](https://en.wikipedia.org/w/index.php?title=Thick_client&redirect=yes) applications anymore, so let's make this a little more realistic by changing it to be browser based.
-

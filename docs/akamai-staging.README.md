@@ -1,27 +1,27 @@
 ---
-
+: """"
 ---
 # akamai-staging
 
 ![npm](https://img.shields.io/npm/v/akamai-staging.svg?style=plastic)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/77426eb3f96e4e8d9cc4048e4b13bc1e)](https://www.codacy.com?utm_source=bitbucket.org&amp;utm_medium=referral&amp;utm_content=MarkSMurphy/staging&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/77426eb3f96e4e8d9cc4048e4b13bc1e)](https://www.codacy.com?utm_source=bitbucket.org&utm_medium=referral&utm_content=MarkSMurphy/staging&utm_campaign=Badge_Grade)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/akamai-staging.svg?style=plastic)
 ![npm](https://img.shields.io/npm/dm/akamai-staging.svg?style=plastic)
 ![NPM](https://img.shields.io/npm/l/akamai-staging.svg?style=plastic)
 
 ## Quick Start
 
-- Install globally using `npm install -g akamai-staging`
-- Run `staging [domain]`
-- Append the output to your local `hosts` file
+-   Install globally using `npm install -g akamai-staging`
+-   Run `staging [domain]`
+-   Append the output to your local `hosts` file
 
 ### Platform - Linux
 
-![`sudo npm install -g akamai-staging` & `staging [domain]`](https://marksmurphy.github.io/img/staging-linux.gif)
+![\`sudo npm install -g akamai-staging\` & \`staging \[domain\]\`](https://marksmurphy.github.io/img/staging-linux.gif)
 
 ### Platform - Windows
 
-![`npm install -g akamai-staging` & `staging [domain]`](https://marksmurphy.github.io/img/staging-windows.gif)
+![\`npm install -g akamai-staging\` & \`staging \[domain\]\`](https://marksmurphy.github.io/img/staging-windows.gif)
 
 ## Overview
 
@@ -29,7 +29,7 @@
 
 If you work on a website hosted behind Akamai's CDN you will, on occasion, need to test a newer Akamai configuration for your domain via their **Staging** network.  This utility provides you with a staging network IP address for the supplied domain in a `hosts` file format.
 
----
+* * *
 
 ## Description
 
@@ -39,21 +39,25 @@ When it is necessary to test a newer Akamai configuration for a domain, you need
 
 This utility aids that process by accepting one or more fully qualified domain names and listing out their respective **Staging** IP addresses.
 
----
+* * *
 
 ## Installation
 
 ```text
+
+
 npm install -g akamai-staging
+
+
 ```
 
----
+* * *
 
 ## Usage
 
 `staging domain [domain [domain] ...]`
 
----
+* * *
 
 ## Examples
 
@@ -62,9 +66,13 @@ npm install -g akamai-staging
 `staging www.akamai.com`
 
 ```text
+
+
 C:\>staging www.akamai.com
 
 23.195.136.39 www.akamai.com                         #Akamai Staging variant of [www.akamai.com.edgekey.net]
+
+
 
 ```
 
@@ -75,6 +83,8 @@ If your front-end consists of multiple domains, you may need to point more than 
 `staging www.akamai.com www.asos.com www.bridgestone.com www.colorcon.com www.dominos.co.uk`
 
 ```text
+
+
 C:\>staging www.akamai.com www.asos.com www.bridgestone.com www.colorcon.com www.dominos.co.uk
 
 23.198.85.168 www.akamai.com                         #Akamai Staging variant of [www.akamai.com.edgekey.net]
@@ -83,17 +93,21 @@ C:\>staging www.akamai.com www.asos.com www.bridgestone.com www.colorcon.com www
 23.44.121.71 www.colorcon.com                        #Akamai Staging variant of [www.colorcon.com.edgekey.net]
 23.44.114.227 www.dominos.co.uk                      #Akamai Staging variant of [www.dominos.co.uk.edgekey.net]
 
+
+
 ```
 
 ### Redirecting output to `hosts` file
 
 Why not redirect `stdout` to append the `hosts` file, seeing as you're going to need these entries in there anyway.
 
-*NB* **you may have flush your O/S's resolver cache, and flush your browser DNS cache before new `hosts` entry is recognised**
+_NB_ **you may have flush your O/S's resolver cache, and flush your browser DNS cache before new `hosts` entry is recognised**
 
 #### Windows (as local admin)
 
 ```text
+
+
 C:\>staging.js www.akamai.com >> %systemroot%\system32\drivers\etc\hosts
 
 C:\>type %systemroot%\system32\drivers\etc\hosts
@@ -124,11 +138,15 @@ C:\>type %systemroot%\system32\drivers\etc\hosts
 23.195.136.39 www.akamai.com                         #Akamai Staging variant of [www.akamai.com.edgekey.net]
 
 C:\>▄
+
+
 ```
 
 #### Linux (as root)
 
 ```text
+
+
 root@LinuxMint-VirtualBox:~$ staging www.akamai.com >> /etc/hosts
 root@LinuxMint-VirtualBox:~$ cat /etc/hosts
 127.0.0.1    localhost
@@ -143,9 +161,11 @@ ff02::2 ip6-allrouters
 23.195.136.39 www.akamai.com                         #Akamai Staging variant of [www.akamai.com.edgekey.net]
 
 root@LinuxMint-VirtualBox:~$ █
+
+
 ```
 
----
+* * *
 
 ## Debugging
 
@@ -154,24 +174,36 @@ root@LinuxMint-VirtualBox:~$ █
 ### Windows
 
 ```text
+
+
 set debug=staging
 staging [domain]
+
+
 ```
 
 ### Linux
 
 ```text
+
+
 DEBUG=staging staging [domain]
+
+
 ```
 
 ### Powershell
 
 ```text
+
+
 $env:debug="staging"
 node akamai-staging [domain]
+
+
 ```
 
----
+* * *
 
 ## Restrictions
 
@@ -181,4 +213,4 @@ DNS standards do not allow a `CNAME` record in the apex (`A` or `AAAA` are the o
 
 A resolution is being explored.
 
----
+* * *

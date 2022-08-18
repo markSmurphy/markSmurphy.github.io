@@ -3,24 +3,23 @@ id: designing-for-availability.md
 title: Designing for Availability
 sidebar_label: Designing for Availability
 ---
-
 ## Abstract
 
----
+* * *
 
 ## Introduction
 
----
+* * *
 
 ### Terminology
 
-* SLA
-* Availability
-* Et al
+-   SLA
+-   Availability
+-   Et al
 
 ## Problem
 
----
+* * *
 
 ### Uptime/Availability Percentages Explained
 
@@ -34,7 +33,7 @@ sidebar_label: Designing for Availability
 
 ## Solution
 
----
+* * *
 
 ### Calculating a System's Availability
 
@@ -52,10 +51,10 @@ sidebar_label: Designing for Availability
 
 ## Conclusion
 
----
+* * *
 
 ## Implications for Designing for the Cloud
 
----
+* * *
 
 ## References

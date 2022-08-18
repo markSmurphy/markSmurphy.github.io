@@ -3,7 +3,6 @@ title: NPM Packages
 author: Mark Murphy
 authorURL: "https://github.com/markSmurphy"
 ---
-
 ## NPM Packages
 
 All of my `npm` packages can be found [here](https://www.npmjs.com/~mark.murphy)
@@ -16,7 +15,7 @@ All of my `npm` packages can be found [here](https://www.npmjs.com/~mark.murphy)
 ![downloads per year](https://img.shields.io/npm/dy/cdn-cache-check?style=flat-square)
 ![downloads total](https://img.shields.io/npm/dt/cdn-cache-check?style=flat-square)
 
----
+* * *
 
 ### Distributed Dig
 
@@ -26,7 +25,7 @@ All of my `npm` packages can be found [here](https://www.npmjs.com/~mark.murphy)
 ![downloads per year](https://img.shields.io/npm/dy/distributed-dig?style=flat-square)
 ![downloads total](https://img.shields.io/npm/dt/distributed-dig?style=flat-square)
 
----
+* * *
 
 ### Codename Generator
 
@@ -36,7 +35,7 @@ All of my `npm` packages can be found [here](https://www.npmjs.com/~mark.murphy)
 ![downloads per year](https://img.shields.io/npm/dy/codename-generator?style=flat-square)
 ![downloads total](https://img.shields.io/npm/dt/codename-generator?style=flat-square)
 
----
+* * *
 
 ### Akamai Error Lookup
 
@@ -46,7 +45,7 @@ All of my `npm` packages can be found [here](https://www.npmjs.com/~mark.murphy)
 ![downloads per year](https://img.shields.io/npm/dy/akamai-error-lookup?style=flat-square)
 ![downloads total](https://img.shields.io/npm/dt/akamai-error-lookup?style=flat-square)
 
----
+* * *
 
 ### Akamai Staging
 
@@ -56,4 +55,4 @@ All of my `npm` packages can be found [here](https://www.npmjs.com/~mark.murphy)
 ![downloads per year](https://img.shields.io/npm/dy/akamai-staging?style=flat-square)
 ![downloads total](https://img.shields.io/npm/dt/akamai-staging?style=flat-square)
 
----
+* * *
