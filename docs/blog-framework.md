@@ -9,7 +9,7 @@ In order to keep the tone and layout of each article consistent, we're going to 
 
 ## Abstract
 
-```
+```text
 
 
 provides an overview of the report content, including findings and conclusions
@@ -21,7 +21,7 @@ may not be required in a short lab report
 
 ## Introduction
 
-```
+```text
 
 
 provides appropriate background to the scenario and briefly explains any relevant
@@ -33,7 +33,7 @@ of the example system
 
 ## Problem
 
-```
+```text
 
 
 describes a sample topology of a typical system and the interaction between tiers
@@ -45,7 +45,7 @@ be encountered
 
 ## Solution
 
-```
+```text
 
 
 describes a modification of the previous system with a description of how the
@@ -56,7 +56,7 @@ previous problems are resolved
 
 ## Conclusion
 
-```
+```text
 
 
 reminds the reader what problem was being investigated
@@ -68,7 +68,7 @@ briefly identifies big-picture implications of the findings (Answers the questio
 
 ## References
 
-```
+```text
 
 
 lists the publication details of all sources cited in the text, allowing readers to locate sources quickly and easily
@@ -81,7 +81,7 @@ usually follows a specific referencing style
 
 ## Markdown
 
-```
+```text
 
 
 ---

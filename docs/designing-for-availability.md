@@ -13,9 +13,9 @@ sidebar_label: Designing for Availability
 
 ### Terminology
 
--   SLA
--   Availability
--   Et al
+- SLA
+- Availability
+- Et al
 
 ## Problem
 

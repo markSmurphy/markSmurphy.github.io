@@ -1,0 +1,8 @@
+{
+  "label": "NPM Packages",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "The following are command line utilities I've written in node.js over the years. I've published them to NPM in case anyone else also finds them useful."
+  }
+}
