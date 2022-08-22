@@ -5,11 +5,11 @@ sidebar_label: Designing for Availability
 ---
 ## Abstract
 
-* * *
+---
 
 ## Introduction
 
-* * *
+---
 
 ### Terminology
 
@@ -19,7 +19,7 @@ sidebar_label: Designing for Availability
 
 ## Problem
 
-* * *
+---
 
 ### Uptime/Availability Percentages Explained
 
@@ -33,7 +33,7 @@ sidebar_label: Designing for Availability
 
 ## Solution
 
-* * *
+---
 
 ### Calculating a System's Availability
 
@@ -51,10 +51,10 @@ sidebar_label: Designing for Availability
 
 ## Conclusion
 
-* * *
+---
 
 ## Implications for Designing for the Cloud
 
-* * *
+---
 
 ## References

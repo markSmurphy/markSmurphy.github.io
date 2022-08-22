@@ -5,14 +5,14 @@ sidebar_label: Hosting Web Assets
 ---
 ## Abstract
 
-* * *
+---
 
 ## Introduction
 
--   Site Speed (serving from a cache is faster)
--   Minimise or eliminate stale content
+- Site Speed (serving from a cache is faster)
+- Minimise or eliminate stale content
 
-* * *
+---
 
 ## Problem
 
@@ -22,7 +22,7 @@ sidebar_label: Hosting Web Assets
 
 ### Global Rollout/Rollback Cache Poisoning example
 
-* * *
+---
 
 ## Solution
 
@@ -40,10 +40,10 @@ sidebar_label: Hosting Web Assets
 
 ### Hosting assets separately from server-side code
 
-* * *
+---
 
 ## Conclusion
 
-* * *
+---
 
 ## References
