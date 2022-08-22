@@ -62,7 +62,7 @@ const config = {
         title: 'Home',
         logo: {
           alt: 'Logo',
-          src: 'img/logos/transparent-dark-blue-plain.png',
+          src: 'img/logos/grey-plain.png',
         },
         items: [
           {
