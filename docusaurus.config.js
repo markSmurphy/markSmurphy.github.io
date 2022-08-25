@@ -62,7 +62,7 @@ const config = {
         title: 'Home',
         logo: {
           alt: 'Logo',
-          src: 'img/logos/grey-plain.png',
+          src: 'img/logos/transparent-grey-plain.png',
         },
         items: [
           {
@@ -92,7 +92,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mark Murphy. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Mark Murphy. </br>Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
