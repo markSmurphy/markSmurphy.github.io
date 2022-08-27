@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tech Blog - Mark Murphy',
-  tagline: 'Exploring the design of cloud native hosting solutions for hyperscale',
+  title: 'Tech Blog',
+  tagline: 'Exploring how to design cloud native hosting solutions for hyperscale and performance',
   url: 'https://marksmurphy.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -92,7 +92,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mark Murphy. </br>Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Mark Murphy </br>Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

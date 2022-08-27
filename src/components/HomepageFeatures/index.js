@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Performance Optimisations',
+    Svg: require('@site/static/img/home/undraw_speed_test.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Serving more traffic with less resources is fundamental to achieving hyperscale.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Scalability',
+    Svg: require('@site/static/img/home/undraw_building_websites.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Scaling application tiers to handle traffic spikes.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'High Availability',
+    Svg: require('@site/static/img/home/undraw_going_up.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Hosting services in multiple cloud regions (<code>active/active</code>) spreads the traffic by routing to the nearest available region, and can achieve 99.99% up time.
       </>
     ),
   },
