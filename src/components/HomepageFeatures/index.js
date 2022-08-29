@@ -11,6 +11,7 @@ const FeatureList = [
         Serving more traffic with less resources is fundamental to achieving hyperscale.
       </>
     ),
+    href: '/blog',
   },
   {
     title: 'Scalability',
@@ -20,6 +21,7 @@ const FeatureList = [
         Scaling application tiers to handle traffic spikes.
       </>
     ),
+    href: '/blog',
   },
   {
     title: 'High Availability',
@@ -29,17 +31,20 @@ const FeatureList = [
         Hosting services in multiple cloud regions (<code>active/active</code>) spreads the traffic by routing to the nearest available region, and can achieve 99.99% up time.
       </>
     ),
+    href: '/blog/2022/04/12/High-Availability',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, href}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <Svg className={styles.featureSvg} role="img"/>
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+        <h3>
+        <a href={href}>{title}</a>
+        </h3>
         <p>{description}</p>
       </div>
     </div>
