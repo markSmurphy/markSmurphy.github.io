@@ -65,12 +65,12 @@ const config = {
           src: 'img/logos/transparent-grey-plain.png',
         },
         items: [
-          {
+          /* {
             type: 'doc',
             docId: 'introduction',
             position: 'left',
             label: 'Introduction',
-          },
+          }, */
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/markSmurphy',
