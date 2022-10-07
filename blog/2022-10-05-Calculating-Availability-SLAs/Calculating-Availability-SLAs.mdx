@@ -1,0 +1,142 @@
+---
+title: Calculating Availability SLAs in Distributed Systems
+author: Mark Murphy
+authorURL: https://github.com/markSmurphy
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Complexity in multi-tiered systems
+
+Modern cloud-native solutions invariably employ micro-service architecture, resulting in highly distributed applications spanning multiple tiers.
+
+The benefits of this approach are well documented and not in dispute, but it does add a certain complexity.
+
+The complexity we're referring to here is *not* complexity of the code, nor complexity of the functionality of the solution; By **complexity** we mean the non-functional complexity that come hand-in-hand with multi-tiered micro-service solutions. As an end-to-end system becomes more complex, it also becomes, probabilistically, less available.
+
+Consider the example topology below, and that each of these nine tiers will be underpinned by a given cloud service, and the service provider will publish it's availability [SLA](https://en.wikipedia.org/wiki/Service-level_agreement) for each of those services; but when *our* end users expect an SLA statement about the guaranteed availability of *our* overall service, **How do we calculate the availability SLA of a distributed system?**
+
+[![Example Topology](./img/High_Availability_Example.png)](./img/High_Availability_Example.png)
+
+To work this out for any conceivable topology, we must first understand the **The relationship between complexity and availability**
+
+---
+
+## The Relationship Between Complexity and Availability
+
+To understand this better, let's start off with a simple topology and add complexity as we go:
+
+### Single tier
+
+[![Simple Topology](./img/High_Availability_Simple_Topology.png)](./img/High_Availability_Simple_Topology.png)
+
+In the example above we have a client-side application which connects directly to a cloud hosted database, and the cloud provider's SLA states an availability of 99%.
+
+If the database is down, then our whole system is down. So our system also, inherently, has an availability of **99%**
+
+:::caution
+There are very good reasons why don't design [thick-client](https://en.wikipedia.org/w/index.php?title=Thick_client&redirect=yes) applications anymore.
+
+This example serves only as a baseline upon which to add complexity and examine how the system's availability evolves.
+:::
+
+Let's make our system a little more realistic by changing it to be a browser based application and see how it changes our system's 99% Availability.
+
+---
+
+### Two tiers
+
+If we add a web server between the client and the database we're introducing a new tier into our system.
+
+[![Web Application Topology](./img/High_Availability_Web_app.png)](./img/High_Availability_Web_app.png)
+
+The client's browser uses `HTTPS` to communicate with the web server, and the application hosted on the web server connects to the database.
+
+> For simplicity we're stating that the web server's availability is also 99%.
+
+If either of these two tiers are down, then our system is down (because each tier is useless by itself).
+
+#### Calculating Probability
+
+So we now have two tiers, each with 0.99 probability of being available at any given point time.
+
+:::info
+
+Probabilities are expressed as numbers between **zero** (no chance of happening) and **one** (a certainty).
+
+:::
+
+Calculating our system's availability is a simple matter of multiplying each tier's probability of being available (being up).
+
+```text
+0.99 * 0.99 = 0.98
+```
+
+So our revised system architecture has an availability **98%**. Notice that this is *lower* than the previous, more simplistic, example. If this is surprising to you. it can rationalised by considering that we'd expect the database to be down 1% of the time, but we'd also expect the web server to be down 1% of the time. These two separate downtimes combine for a total of 2% downtime.
+
+:::tip
+
+The addition of additional tiers into a distributed application decreases it's expected availability.
+
+:::
+
+---
+
+### Real World Example
+
+Let's return to our earlier example of a topology with nine tiers:
+
+   * Relational database
+   * NoSQL database
+   * DNS
+   * Serverless compute
+   * Web Servers
+   * API Gateway
+   * Load Balancer
+   * Firewall
+   * CDN
+
+[![Example Topology](./img/High_Availability_Example.png)](./img/High_Availability_Example.png)
+
+
+<Tabs>
+  <TabItem value="azure" label="Azure" default>
+      Azure Availability SLAs
+
+      | Tier                | Azure Service              | Service Availability |
+      |---------------------|----------------------------|----------------------|
+      | Relational database | Azure SQL Database         |        99.99%        |
+      | NoSQL database      | Azure CosmosDB             |        99.99%        |
+      | DNS                 | Azure Provided DNS         |       100.00%        |
+      | Serverless compute  | Azure Functions            |        99.95%        |
+      | Web Servers         | Azure Cloud Services       |        99.95%        |
+      | API Gateway         | Azure API Management       |        99.95%        |
+      | Load Balancer       | Azure Load Balancer        |        99.99%        |
+      | Firewall            | Azure Firewall             |        99.95%        |
+      | CDN                 | Azure CDN                  |        99.90%        |
+
+      0.9999 * 0.9999 * 1.0000 * 0.9995 * 0.9995 * 0.9995 * 0.9999 * 0.9995 * 0.999 = 0.9967
+
+      End-to-end System's Availability SLA is 99.67%
+  </TabItem>
+  <TabItem value="aws" label="AWS">
+      AWS Availability SLAs
+
+      | Tier                | AWS Service                | Service Availability |
+      |---------------------|----------------------------|----------------------|
+      | Relational database | Amazon RDS                 |        99.95%        |
+      | NoSQL database      | AWS DynamoDB               |        99.99%        |
+      | DNS                 | Amazon Route 53            |        99.99%        |
+      | Serverless compute  | AWS Lambda                 |        99.95%        |
+      | Web Servers         | Amazon Lightsail (managed) |        99.95%        |
+      | API Gateway         | AWS API Gateway            |        99.95%        |
+      | Load Balancer       | Elastic Load Balancer      |        99.99%        |
+      | Firewall            | AWS Network Firewall       |        99.90%        |
+      | CDN                 | Amazon CloudFront          |        99.90%        |
+
+      0.9995 * 0.9999 * 0.9999 * 0.9995 * 0.9995 * 0.9995 * 0.9999 * 0.9990 * 0.9990 = 0.9957
+
+      End-to-end System's Availability SLA is 99.57%
+  </TabItem>
+</Tabs>
