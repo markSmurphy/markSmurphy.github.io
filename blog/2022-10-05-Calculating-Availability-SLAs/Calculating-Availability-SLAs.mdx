@@ -99,6 +99,7 @@ Let's return to our earlier example of a topology with nine tiers:
 
 [![Example Topology](./img/High_Availability_Example.png)](./img/High_Availability_Example.png)
 
+Using our cloud service provider's SLA documentation, such as [Azure's](https://azure.microsoft.com/en-us/support/legal/sla/summary/) or [AWS's](https://aws.amazon.com/legal/service-level-agreements/), we can find the Service Availability for each of our tiers and multiply them together to obtain our solution's availability.
 
 <Tabs>
   <TabItem value="azure" label="Azure" default>
@@ -119,7 +120,7 @@ Let's return to our earlier example of a topology with nine tiers:
       0.9999 * 0.9999 * 1.0000 * 0.9995 * 0.9995 * 0.9995 * 0.9999 * 0.9995 * 0.999 = 0.9967
 
       End-to-end System's Availability SLA is 99.67%
-  </TabItem>
+-  </TabItem>
   <TabItem value="aws" label="AWS">
       AWS Availability SLAs
 
@@ -140,3 +141,24 @@ Let's return to our earlier example of a topology with nine tiers:
       End-to-end System's Availability SLA is 99.57%
   </TabItem>
 </Tabs>
+
+It's interesting to note the slight differences between providers. In this example, Azure offers a 0.1% higher availability SLA than AWS for these equivalent services, but there are caveats:
+
+* Many services have multiple tiers, and different tiers offer different availability SLAs. For this example I've used the highest tier on offer, but ...
+* These services change and improve over time, so this example is just snapshot in time rather than evidence of superiority.
+* Service providers may not achieve their SLAs, and conversely may exceed them.
+* Different regions *will* have different uptime results. e.g. AWS's `us-east-1` region *usually* gets updates first, so you might expect solutions deployed there to be effected more by problematic updates.
+* In my experience, downtime normally results from problems with deployments of the solution, or escaped bugs, rather than the underlying cloud platform. So the lesson there is to avoid shooting yourself in the foot by having a like-live non-production environment and a robust QA process.
+
+## Conclusion
+
+If you're going to offer your user-base an **Availability SLA**, then this methodology will allow you to calculate the composite availability for your solution. The key points are:
+
+* Identify each critical tier in your solution and the service that hosts them.
+* Our example is constrained to services offered be a single cloud provider, but you might have additional third party services to include too (CDN, oAuth provider, back-end SaaS service, etc).
+* Obtain the provider's availability SLA for each of these tiers/services as a value between zero and one (i.e. 0.995 = 99.5%).
+* Multiply all of these values together to obtain your solution's SLA.
+* Keep in mind that this figure represents the *highest* SLA you should offer for your solution because:
+  * For your solution to exceed this uptime objective you'll need your service providers to exceed their's, and you can't guarantee that.
+  * There are other variables that can effect availability that aren't accounted for, such as failed deployments, bugs, misconfigurations, etc.
+  * In other words, if you achieve a higher uptime it'll be by luck rather than by design, so don't quote anything higher.
