@@ -1,7 +1,7 @@
 ---
 id: filename-here.md
-title: Full Title Here
-sidebar_label: Short Title Here
+title: Blog Framework Template
+sidebar_label: Blog Template
 ---
 ## Framework
 
