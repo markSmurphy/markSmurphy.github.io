@@ -103,7 +103,7 @@ Using our cloud service provider's SLA documentation, such as [Azure's](https://
 
 <Tabs>
   <TabItem value="azure" label="Azure" default>
-      Azure Availability SLAs
+    Azure Availability SLAs
 
       | Tier                | Azure Service              | Service Availability |
       |---------------------|----------------------------|----------------------|
@@ -120,9 +120,11 @@ Using our cloud service provider's SLA documentation, such as [Azure's](https://
       0.9999 * 0.9999 * 1.0000 * 0.9995 * 0.9995 * 0.9995 * 0.9999 * 0.9995 * 0.999 = 0.9967
 
       End-to-end System's Availability SLA is 99.67%
--  </TabItem>
+
+  </TabItem>
+
   <TabItem value="aws" label="AWS">
-      AWS Availability SLAs
+    AWS Availability SLAs
 
       | Tier                | AWS Service                | Service Availability |
       |---------------------|----------------------------|----------------------|
@@ -139,8 +141,11 @@ Using our cloud service provider's SLA documentation, such as [Azure's](https://
       0.9995 * 0.9999 * 0.9999 * 0.9995 * 0.9995 * 0.9995 * 0.9999 * 0.9990 * 0.9990 = 0.9957
 
       End-to-end System's Availability SLA is 99.57%
+
   </TabItem>
 </Tabs>
+
+---
 
 It's interesting to note the slight differences between providers. In this example, Azure offers a 0.1% higher availability SLA than AWS for these equivalent services, but there are caveats:
 
@@ -154,11 +159,11 @@ It's interesting to note the slight differences between providers. In this examp
 
 If you're going to offer your user-base an **Availability SLA**, then this methodology will allow you to calculate the composite availability for your solution. The key points are:
 
-* Identify each critical tier in your solution and the service that hosts them.
-* Our example is constrained to services offered be a single cloud provider, but you might have additional third party services to include too (CDN, oAuth provider, back-end SaaS service, etc).
-* Obtain the provider's availability SLA for each of these tiers/services as a value between zero and one (i.e. 0.995 = 99.5%).
-* Multiply all of these values together to obtain your solution's SLA.
-* Keep in mind that this figure represents the *highest* SLA you should offer for your solution because:
+1 Identify each critical tier in your solution and the service that hosts them.
+2 Our example is constrained to services offered be a single cloud provider, but you might have additional third party services to include too (CDN, oAuth provider, back-end SaaS service, etc).
+3 Obtain the provider's availability SLA for each of these tiers/services as a value between zero and one (i.e. 0.995 = 99.5%).
+4 Multiply all of these values together to obtain your solution's SLA.
+5 Keep in mind that this figure represents the *highest* SLA you should offer for your solution because:
   * For your solution to exceed this uptime objective you'll need your service providers to exceed their's, and you can't guarantee that.
   * There are other variables that can effect availability that aren't accounted for, such as failed deployments, bugs, misconfigurations, etc.
   * In other words, if you achieve a higher uptime it'll be by luck rather than by design, so don't quote anything higher.
