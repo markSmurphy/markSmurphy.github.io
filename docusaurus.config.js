@@ -72,6 +72,7 @@ const config = {
             label: 'Introduction',
           }, */
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/category/npm-packages', label: 'NPM Packages', position: 'left'},
           {
             href: 'https://github.com/markSmurphy',
             label: 'GitHub',
