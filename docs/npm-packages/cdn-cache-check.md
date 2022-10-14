@@ -18,7 +18,7 @@ authorURL: https://github.com/markSmurphy
 ## Installation
 
 ```bash
-npm install cdn-cache-check --location=global
+npm install -g cdn-cache-check
 ```
 
 ## Usage

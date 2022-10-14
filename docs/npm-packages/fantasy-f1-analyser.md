@@ -18,7 +18,7 @@ authorURL: https://github.com/markSmurphy
 ## Installation
 
 ```bash
-npm install fantasy-f1-analyzer --location=global
+npm install -g fantasy-f1-analyzer
 ```
 
 ## Usage

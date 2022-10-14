@@ -20,7 +20,7 @@ Useful for checking if a DNS record has been fully propagated, or for querying t
 ## Installation
 
 ```bash
-npm install distributed-dig --location=global
+npm install -g distributed-dig
 ```
 
 ## Usage

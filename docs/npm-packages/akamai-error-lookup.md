@@ -18,7 +18,7 @@ authorURL: https://github.com/markSmurphy
 ## Installation
 
 ```bash
-npm install akamai-error-lookup --location=global
+npm install -g akamai-error-lookup
 ```
 
 ## Usage

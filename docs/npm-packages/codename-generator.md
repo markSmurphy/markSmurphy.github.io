@@ -20,7 +20,7 @@ It has a small dictionary of a few thousand inoffensive adjectives and nouns whi
 ## Installation
 
 ```bash
-npm install codename-generator --location=global
+npm install -g codename-generator
 ```
 
 ## Usage

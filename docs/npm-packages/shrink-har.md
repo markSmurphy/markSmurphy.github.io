@@ -30,7 +30,7 @@ Shrink-HAR will:
 ## Installation
 
 ```bash
-npm install shrink-har --location=global
+npm install -g shrink-har
 ```
 
 ## Usage

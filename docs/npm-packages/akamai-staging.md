@@ -18,7 +18,7 @@ authorURL: https://github.com/markSmurphy
 ## Installation
 
 ```bash
-npm install akamai-staging --location=global
+npm install -g akamai-staging
 ```
 
 ## Usage
