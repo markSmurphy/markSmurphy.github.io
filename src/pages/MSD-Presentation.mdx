@@ -67,7 +67,7 @@ The Search API was to be RESTful and offered two endpoints:
 ### 3. Search UI
 * A server-side ASP.NET component which called the Search API and rendered the results. This would be called by browser based clients only.
 
-[![Existing System Topology](/img/caci/02-solution-topology.png)](/img/02-solution-topology.png)
+[![Existing System Topology](/img/caci/02-solution-topology.png)](/img/caci/02-solution-topology.png)
 
 Other, existing, components need modification:
 
@@ -94,11 +94,9 @@ No two search queries are equal. Some could yield few results quickly, while oth
 This made a testing strategy difficult, and working with QA essential to help bolster their understanding and capabilities.
 
 ## Security
-The solution had end-to-end encryption over the wire, appropriately restrictive TLS and cipher suite configuration for each ingress point, and a WAF solution at the edge.
+The solution had end-to-end encryption over the wire, appropriately restrictive TLS and cipher suite configuration for each ingress point, CORS policies, and a WAF solution at the edge.
 
-## Release Mechanism
-
-## Availability
-
-## Monitoring and Operations
+## Further discussion points
+* High Availability with dual cloud regions
+* Monitoring and Operations
 ---
