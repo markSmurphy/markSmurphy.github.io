@@ -1,0 +1,104 @@
+---
+title: MSD-CACI Interview Presentation
+description: Solution Architecture
+author: Mark Murphy
+authorURL: https://github.com/markSmurphy
+hide_table_of_contents: true
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+![logo](/img/caci/caci.logo.png)
+# Interview Presentation
+
+## Overview
+
+The company, who was a large e-commerce retailer, wanted a new search engine on the site.
+
+The existing solution was no longer inline with customer expectations, couldn't support international sites, and struggled during peak load.
+
+A preferred supplier had already been selected, so a project was started to design (and cost) a detailed end-to-end solution.
+
+The existing solution was on premise, but the technical strategy was to migrate to the cloud, so the project needed to:
+
+* Deploy a new, cloud native, Search solution.
+* Integrate the back-end with the new Search SaaS provider.
+* Deprecate the current solution.
+
+## Requirements
+
+The new Search solution needed to:
+
+### Functional Requirements
+* Support multiple languages.
+* Support refinement of Category pages.
+* Offer more relevant search results.
+* Allow tuned ranking order.
+* Support synonyms.
+* Include newly added SKUs in Search results in a timely manner (within 30 minutes).
+* Support mobile native apps as a first class citizen.
+
+### Non-function Requirements
+* Be in accordance with technical strategy (i.e. cloud native).
+* Be scalable and future proofed for five years.
+* Be highly available.
+* Be performant during peak traffic load.
+* Support a phased roll-out with the ability to rollback.
+* Be secure
+
+
+## Existing System Topology
+
+A combination of reading documentation, discussions with people who possessed local knowledge, and access to live configuration allowed the creation of an as-is topology.
+
+[![Existing System Topology](/img/caci/01-existing-system.png)](/img/caci/01-existing-system.png)
+
+## Solution Overview
+
+The solution required three new components:
+
+### 1. A data extraction and upload service.
+This service's function was to extract the product catalogue data, transform it into the required format, and upload it to the new Search Provider. It was to be deployed on-premise because that's where the data source was, and migrating the Product Catalogue into the cloud was out of scope of this project.
+It would run every 15 minutes to upload deltas, and once every 24 hours it would upload the entire product catalogue again.
+### 2. A Search API
+The Search API was to be RESTful and offered two endpoints:
+* One for auto-complete, where search suggestions are returned, in `JSON` for each keystroke. This would be called directly be mobile and browser based clients.
+* One which returned the full search results for a specified query string in `JSON`.
+### 3. Search UI
+* A server-side ASP.NET component which called the Search API and rendered the results. This would be called by browser based clients only.
+
+[![Existing System Topology](/img/caci/02-solution-topology.png)](/img/02-solution-topology.png)
+
+Other, existing, components need modification:
+
+### CDN
+The CDN needed new layer-7 routing rules to inspect incoming URL paths and go forward to the respective cloud origins for the new Search URLs.
+Caching rules also needed to be applied to the specific responses in order to optimise the offload without serving stale content.
+
+### Native Apps
+The Android and iOS apps needed to be updated to consume the new Search API. This would replace the existing approach of the app hosting a browser and consuming the search page URL.
+
+### Feature Flags
+Both native apps, and browser based clients would have the new search enabled via feature flags, and these flags could be enabled on a per international site basis.
+
+## Performance Optimisations
+The UI's `HTML` response, and the API's `JSON` response were designed to be publicly cacheable (i.e. no user-centric content) and as such can be cached in the CDN making subsequent requests for the same search term a lot faster and cheaper to serve.
+
+The requests which aren't offloaded need to be processed by the server-side API, which requires a query to be sent to the Search Provider. This takes time, and the provider's charge model is volumetric so it also costs money. A read-through cache was introduced to prevent every Search request from resulting in a chargeable call to the Search Provider.
+This meant the solution scaled out a lot better, was more performant and cheaper to run. As long os the cache TTLs were not too high, it also met the requirement of timely delivery of new products.
+
+There was tuned caching policies across four tiers (client, CDN, server in-memory, Redis distributed cache).
+
+## Testing Scalability
+No two search queries are equal. Some could yield few results quickly, while other would take longer to yield hundreds. Some would be cached (in one of the four tiers) while others wouldn't.
+This made a testing strategy difficult, and working with QA essential to help bolster their understanding and capabilities.
+
+## Security
+The solution had end-to-end encryption over the wire, appropriately restrictive TLS and cipher suite configuration for each ingress point, and a WAF solution at the edge.
+
+## Release Mechanism
+
+## Availability
+
+## Monitoring and Operations
+---
