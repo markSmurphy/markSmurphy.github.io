@@ -2,22 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://marksmurphy.github.io/blog</id>
     <title>Tech Blog Blog</title>
-    <updated>2022-10-13T00:00:00.000Z</updated>
+    <updated>2022-10-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://marksmurphy.github.io/blog"/>
     <subtitle>Tech Blog Blog</subtitle>
     <icon>https://marksmurphy.github.io/img/favicon.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[HTTP Caching Guide]]></title>
-        <id>/2022/10/13/HTTP-Caching/HTTP-Caching-Guide</id>
-        <link href="https://marksmurphy.github.io/blog/2022/10/13/HTTP-Caching/HTTP-Caching-Guide"/>
-        <updated>2022-10-13T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<p>In this article we'll take a deep dive into HTTP caching and how to optimise your implementation.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-cache">Why cache<a class="hash-link" href="#why-cache" title="Direct link to heading">​</a></h2><ul><li>Performance</li><li>Scaleability</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="basics">Basics<a class="hash-link" href="#basics" title="Direct link to heading">​</a></h2><p>client/server example &amp; <code>cache-control</code> header</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="public-vs-private">Public vs Private<a class="hash-link" href="#public-vs-private" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithStickyNavbar_LWe7" id="invalidation">Invalidation<a class="hash-link" href="#invalidation" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithStickyNavbar_LWe7" id="tiered-caching">Tiered caching<a class="hash-link" href="#tiered-caching" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithStickyNavbar_LWe7" id="cdn--intermediaryproxy-caches">CDN &amp; Intermediary/proxy caches<a class="hash-link" href="#cdn--intermediaryproxy-caches" title="Direct link to heading">​</a></h2><h3 class="anchor anchorWithStickyNavbar_LWe7" id="purging">Purging<a class="hash-link" href="#purging" title="Direct link to heading">​</a></h3><h2 class="anchor anchorWithStickyNavbar_LWe7" id="conditional-gets--etags">Conditional GETS &amp; ETags<a class="hash-link" href="#conditional-gets--etags" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithStickyNavbar_LWe7" id="cache-poisoning">Cache poisoning<a class="hash-link" href="#cache-poisoning" title="Direct link to heading">​</a></h2><p><code>Vary</code> header</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="putting-it-all-together">Putting it all together<a class="hash-link" href="#putting-it-all-together" title="Direct link to heading">​</a></h2><h2 class="anchor anchorWithStickyNavbar_LWe7" id="gotchas">Gotchas<a class="hash-link" href="#gotchas" title="Direct link to heading">​</a></h2><ul><li>Not setting a cache-control header and using client-side defaults</li><li>CORS and <code>Vary</code> header</li></ul>]]></content>
-        <author>
-            <name>Mark Murphy</name>
-            <uri>https://github.com/markSmurphy</uri>
-        </author>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Calculating Availability SLAs in Distributed Systems]]></title>
         <id>/2022/10/05/Calculating-Availability-SLAs/Calculating-Availability-SLAs</id>

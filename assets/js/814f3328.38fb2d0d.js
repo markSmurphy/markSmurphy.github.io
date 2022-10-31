@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_blog=self.webpackChunktech_blog||[]).push([[535],{5641:t=>{t.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Calculating Availability SLAs in Distributed Systems","permalink":"/blog/2022/10/05/Calculating-Availability-SLAs/Calculating-Availability-SLAs"}]}')}}]);
